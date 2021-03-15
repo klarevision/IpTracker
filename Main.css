@@ -1,0 +1,209 @@
+:root{
+  --VeryDarkGray: hsl(0, 0%, 17%);
+  --DarkGray: hsl(0, 0%, 59%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+html{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+body{
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+header{
+  height: 19rem;
+  background-image: url(images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1{
+color: var(--white);
+margin-top: 2rem;
+
+}
+.ipaddrdata{
+  position: relative;
+  margin-top: 0.8rem;
+  z-index: 1;
+}
+
+.ipaddrdata input[type=text]{
+
+  height: 4rem;
+  width:20.4rem;
+  border: none;
+  border-radius:20px;
+  padding:0 17px ;
+  font-size: 0.9rem;
+  z-index: 1;
+
+}
+
+.ipaddrdata input[type=text]:focus{
+  outline: none;
+  font-size: 1.125rem;
+}
+
+input:focus::-webkit-input-placeholder{
+  color: transparent !important;
+}
+
+.ipaddrdata::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--black);
+  background-image: url(images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 4rem;
+  width: 3.5rem;
+  border: none;
+  border-radius:0 20px 20px 0;
+  z-index: 2;
+}
+
+#clickspan{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 4rem;
+  width: 3.5rem;
+  background-color: transparent;
+  border-radius:0 20px 20px 0;
+  z-index: 4;
+}
+
+#mapview{
+  height: 33.125rem;
+  z-index: 1;
+}
+
+.floatingplatform{
+  position: absolute;
+  top:12.3rem ;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--white);
+  border: none;
+  border-radius: 20px;
+  min-width: 22.5rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding:1rem 0 1rem 0;
+  z-index: 2;
+}
+.floatingplatform h4{
+  color: var(--DarkGray);
+  font-size:0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.floatingplatform p{
+  color: var(--black);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+
+  .attribution { 
+      font-size: 16px; 
+      text-align:center; 
+      background-image: url(images/pattern-bg.png);
+      background-size: cover;
+    }
+    
+  .attribution a { 
+      color: var(--VeryDarkGray); 
+    }
+
+
+    @media only screen and (min-width : 62.5rem)
+    {
+
+      header{
+        height: 17.44rem;   
+      }
+
+      header h1{
+        margin-top: 2.2rem;
+        }
+
+        .ipaddrdata{
+          margin-top: 0.8rem;
+        }
+
+      .ipaddrdata input[type=text]{
+        width: 34.75rem;
+        font-size: 1.125rem;
+      }
+
+      .floatingplatform{
+        flex-direction: row;
+        top: 13rem;
+        height: 10rem;
+        text-align: start;
+        padding: 0 2rem;
+        /* justify-items: center; */
+        
+      }
+      /* .floatingplatform p{
+        font-size: 1.5rem;
+      } */
+      .ipaddress{
+        
+         margin-right: 3.9rem;
+       
+      }
+      .zone1{
+        padding-left: 1rem;
+      
+      }
+      
+      .location{
+        
+        margin-right: 5.5rem;
+      }
+      .zone2{
+        padding-left: 1rem;
+        border-left: 2px solid var(--DarkGray);
+      }
+
+      .timezone{
+       
+        margin-right: 5.6rem;
+      }
+      .zone3{
+
+        padding-left: 1rem;
+        border-left: 2px solid var(--DarkGray);
+
+      }
+      
+      .isp{
+       
+        margin-right: 5.5rem;
+        /* min-width: 6rem; */
+        
+      }
+      .zone4{
+        padding-left: 1rem;
+        border-left: 2px solid var(--DarkGray);
+      }
+
+    }
